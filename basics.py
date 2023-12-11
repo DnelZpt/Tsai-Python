@@ -59,24 +59,6 @@ def get_A(data):
     return A_m
 
 
-def get_projection_matrix_hardcode(A):
-    """
-    Compute the projection matrix using hardcoded parameters.
-
-    :param A: The input matrix A.
-    :return: The projection matrix.
-    """
-
-    AtA = np.dot(A.T, A)
-    eigenvalue, eigenvector = LA.eig(AtA)
-    pick = np.argmin(eigenvalue)
-    mask = np.zeros((eigenvector.shape[0], 1))
-    mask[pick] = 1
-    projection = np.dot(eigenvector, mask)
-
-    return projection
-
-
 def get_parameters(projection_matrix):
     """
     :param projection_matrix: A 3x4 projection matrix represented as a numpy array.
