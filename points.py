@@ -33,6 +33,18 @@ def get_corner_points(image):
 
 
 def show_corners(image, corners):
+    """
+    Visualizes corners on an image.
+
+    :param image: A numpy array representing the image.
+    :param corners: A list of corner coordinates.
+    :return: None
+
+    Example usage:
+        >>> image = cv2.imread('image.jpg')
+        >>> corners = [[10, 20], [30, 40], [50, 60]]
+        >>> show_corners(image, corners)
+    """
     plt.figure()
     for i in corners:
         x, y = i.ravel()
