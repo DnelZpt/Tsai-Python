@@ -8,7 +8,7 @@ MIE - UTP
 """
 
 import numpy as np
-import utils
+import basics
 from scipy.linalg import svd
 
 path = 'data/'
@@ -18,5 +18,7 @@ for file in corners_files:
     data = np.loadtxt(path + file)
     print(file + ':')
     print(data)
+
+    A_p = basics.get_A(data)
 
 
