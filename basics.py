@@ -185,7 +185,6 @@ def plot_extrinsics(rotation, translation):
         ax.set_aspect('equal', 'box')
         ax.plot(x, y, z, color='green')
         ax.invert_yaxis()
-        # plt.show()
         count += 1
 
 
