@@ -1,3 +1,10 @@
+"""
+Basics functions for camera calibration using Tsai's method
+
+CV - MIE UTP
+2023
+"""
+
 import numpy as np
 from numpy import linalg as LA
 from mpl_toolkits.mplot3d import Axes3D
