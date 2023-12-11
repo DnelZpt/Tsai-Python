@@ -38,7 +38,5 @@ for file in corners_files:
     error = basics.reprojection_error(projection_matrix, rotation, translation, data_imgs)
     print("\nReprojection error is:", error)
 
-    A_p = basics.get_A(data_imgs)
-
 basics.plot_extrinsics(rotation_matrices, translation_vectors)
 plt.show()
