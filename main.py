@@ -42,7 +42,3 @@ for file in corners_files:
 
 basics.plot_extrinsics(rotation_matrices, translation_vectors)
 plt.show()
-
-
-
-

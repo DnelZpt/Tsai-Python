@@ -127,7 +127,8 @@ def plot_extrinsics(rotation, translation):
     """
     print("\nVisualizing extrinsics now!, computing camera location...")
     fig = plt.figure()
-    ax = Axes3D(fig)
+    ax = fig.add_subplot(projection='3d')
+
     count = 1
     for rotation, translation in zip(rotation, translation):
         mag = 50
