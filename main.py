@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 path = 'data/'
 corners_files = ['img_01.txt', 'img_02.txt', 'img_03.txt', 'img_04.txt', 'img_05.txt']
 
-rotation_matrices, translation_vectors = [], []
+intrinsic_matrices, rotation_matrices, translation_vectors = [], [], []
 
 for file in corners_files:
     data_imgs = np.loadtxt(path + file)
@@ -28,6 +28,7 @@ for file in corners_files:
     print("\nProjection matrix :\n", projection_matrix)
 
     intrinsic, rotation, translation = basics.get_parameters(projection_matrix)
+    intrinsic_matrices.append(intrinsic)
     rotation_matrices.append(rotation)
     translation_vectors.append(translation)
 
@@ -40,3 +41,10 @@ for file in corners_files:
 
 basics.plot_extrinsics(rotation_matrices, translation_vectors)
 plt.show()
+
+np.savez(
+    'calibration_parameters.npz',
+    intrinsic_matrices=intrinsic_matrices,
+    rotation_matrices=rotation_matrices,
+    translation_vectors=translation_vectors
+)
