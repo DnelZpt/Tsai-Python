@@ -8,8 +8,15 @@ MIE - UTP
 """
 
 import numpy as np
-import cv2
 import utils
+from scipy.linalg import svd
 
-images_path = '/shoots/'
+path = 'data/'
+corners_files = ['img_01.txt', 'img_02.txt', 'img_03.txt', 'img_04.txt', 'img_05.txt']
+
+for file in corners_files:
+    data = np.loadtxt(path + file)
+    print(file + ':')
+    print(data)
+
 
