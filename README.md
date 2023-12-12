@@ -1,5 +1,5 @@
 # Tsai-Python
-
+    Autores: @dbuitrago24 @kevin-ortega2724 @DnelZpt
 # Calibración de Cámara 
 
 ## Descripción
@@ -81,14 +81,29 @@ Este proceso asegura que se tenga la información necesaria sobre la posición d
 
 ### Desarrollo de una Aplicación de Demostración
 
-1. **Selección de una Aplicación**:
-   Aplicación que queremos.... No lo sé Diosito
-2. **Parámetros de calibración**:
-   Mostrar las matrices.
+1. **Visualización de los parámetros Extrínsecos**:
+   
+   
+<p align="center">
+  <img src="extrinsec.svg" alt="Imagen1" width="40%" style="border: 2px solid black;"/>
+    <img src="extrinsec2.svg" alt="Imagen2" width="40%" style="border: 2px solid black;"/>
+</p>
+
+2. **Selección de una Aplicación**:
+   Verificación de parámetros extrínsecos con una imaen del mundo real. 
+
+<p align="center">
+  <img src="test.jpg" alt="Imagen1" width="40%" style="border: 2px solid black;"/>
+</p>
+
+Este procedimiento facilita la confirmación de la precisión en la calibración realizada. Se emplea una imagen de control que no se incluyó en el conjunto de datos de calibración. De manera análoga al método previamente empleado, es imprescindible la etiqueta de los puntos característicos en la imagen para permitir una comparación efectiva entre las proyecciones calculadas y las posiciones reales de estos puntos. Esto es necesario para validar la precisión de la calibración, ya que permite identificar y cuantificar cualquier desviación o error en la proyección. Al correlacionar los puntos anotados en la imagen de prueba con sus respectivas coordenadas 3D en el espacio, se pueden calcular los errores de reproyección y evaluar la calidad del modelo de calibración. Si los errores son mínimos y dentro de los márgenes aceptables, se confirma que la calibración es precisa y fiable para aplicaciones posteriores. En caso contrario, se requerirá una revisión y ajuste de los parámetros de calibración para mejorar la precisión.
+
+
 
 3. **Implementación del proyecto**:
 
-    Subir imágenes de demos... DIooos
-
-
+    Se muestran imágenes demos.
+<p align="center">
+  <img src="test_lines.jpg" alt="Imagen1" width="40%" style="border: 2px solid black;"/>
+</p>
 
